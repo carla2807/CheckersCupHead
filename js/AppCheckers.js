@@ -506,9 +506,9 @@ function checkForWin()
         }
     }
 
-    //if(CupHeadScore == 12 && MugmanScore == 12){
-       // alert("Empate");
-    //}
+    if(CupHeadScore == 12 && MugmanScore == 12){
+        alert("Empate");
+    }
 }
 
 //Funcion para guardar
