@@ -1,0 +1,243 @@
+*{
+ 
+    font-family: "monserrat" ,sans-serif;
+  }
+  
+  a,ul,li,.menu.header{
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  a {
+      color: #000;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    a:hover{
+        color:#0077da;
+    }
+    
+    /* header */
+    
+    .header {
+      background-color: #fff;
+      box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+      width: 100%;
+      z-index: 3;
+    }
+    
+    .header ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      overflow: hidden;
+      background-color: #fff;
+    }
+    
+    .header li a {
+      display: block;
+      padding: 20px 20px;
+      border-right: 1px solid #f4f4f4;
+      text-decoration: none;
+    }
+    
+    .header li a:hover,
+    .header .menu-btn:hover {
+      background-color: #303030;
+    }
+    
+    .header .logo {
+      display: block;
+      float: left;
+      font-size: 2em;
+      padding: 10px 20px;
+      text-decoration: none;
+    }
+    
+    /* menu */
+    
+    .header .menu {
+      clear: both;
+      max-height: 0;
+      transition: max-height .2s ease-out;
+    }
+    
+    /* menu icon */
+    
+    .header .menu-icon {
+      cursor: pointer;
+      display: inline-block;
+      padding: 28px 20px;
+      position: relative;
+      user-select: none;
+    }
+    
+    .header .menu-icon .navicon {
+      background: #333;
+      display: block;
+      height: 2px;
+      position: relative;
+      transition: 2s ease-out;
+      width: 18px;
+    }
+    
+    .header .menu-icon .navicon:before,
+    .header .menu-icon .navicon:after {
+      background: #333;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%;
+    }
+    
+    .header .menu-icon .navicon:before {
+      top: 5px;
+    }
+    
+    .header .menu-icon .navicon:after {
+      top: -5px;
+    }
+    
+    /* menu btn */
+    
+    .header .menu-btn {
+      display: none;
+    }
+    
+    .header .menu-btn:checked ~ .menu {
+      max-height: 240px;
+    }
+    
+    .header .menu-btn:checked ~ .menu-icon .navicon {
+      background: transparent;
+    }
+    
+    .header .menu-btn:checked ~ .menu-icon .navicon:before {
+      transform: rotate(-45deg);
+    }
+    
+    .header .menu-btn:checked ~ .menu-icon .navicon:after {
+      transform: rotate(45deg);
+    }
+    
+    .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+    .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+      top: 0;
+    }
+    
+    /* Responsive */
+    
+    @media (min-width: 768px) {
+      .header li {
+        float: left;
+      }
+      .header li a {
+        padding: 20px 30px;
+      }
+      .header .menu {
+        clear: none;
+        max-height: none;
+      }
+      .header .menu-icon {
+        display: none;
+      }
+    }
+  
+    /* style contact*/
+    .contact{
+        background: #1A1D29;
+    }
+  
+  .contact-section{
+    padding: 40px 0;
+  }
+  
+  .contact-section h3{
+  font-size: 1.7rem;
+  text-align: center;
+  color:rgb(249, 249, 249);
+  
+  }
+  
+  .contact-form{
+    max-width: 400px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+  }
+  
+  .input-text, .input-email, .textarea{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin: 16px 0;
+  border: 0;
+  color:rgb(249, 249, 249);
+  background-color: rgb(49, 52, 62);
+  padding: 20px 40px;
+  outline: none;
+  }
+  
+  textarea.contact-form-text{
+  
+    resize: none;
+    height: 120px;
+  
+  }
+  
+  .contact-form-btn{
+    width: 100%;
+    height: 48px;
+    padding: 0.7vw;;
+    cursor: pointer;
+    color: rgb(249, 249, 249);
+    font-size: 15px;
+    border-radius: 4px;
+      background-color: rgb(0, 114, 210);
+      border: 1px solid rgb(0, 114, 210);
+  }
+  
+  .contact-form-btn:hover{
+    background-color: rgb(6, 141, 255);
+  
+  }
+  
+  #submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    background-color: #000746;
+    color: #8c8c8c;
+    font-size: 18px;
+    cursor: pointer;
+    border: solid #000000;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    outline: none;
+    transition: all 0.5s;
+  }
+  
+  #submit:hover {
+    background-color: #0022ff;
+    border-color: #8c8c8c;
+    color: #ffffff;
+  }
+  
+  .error {
+    background-color:#ff3b00 !important;
+  }
+  
+  .footer{
+    text-align: center;
+  }
+  .footer a{
+    margin: 0;
+    font-size: 40px;
+    padding:0 10px;
+    font-weight: 700;
+    transition: all 0.5s;
+  }

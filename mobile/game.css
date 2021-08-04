@@ -1,0 +1,90 @@
+body{
+  color: #86888A;
+}
+  /*tablero*/
+  #board{
+   
+    left: 450px;
+  
+  }
+
+  /*Puntos*/
+  #score_card {
+   position:absolute;
+    left:0px;
+    
+}
+
+.player {
+  border:2px solid black;
+  border-radius:10px;
+  margin:5px;
+  padding:5px;
+  text-align:center;
+  font-weight:bold;
+  font-size:18px;
+}
+
+
+#whosturn {
+  border:2px solid black;
+  border-radius:10px;
+  margin:5px;
+  padding:5px;
+  text-align:center;
+  font-weight:bold;
+  font-size:18px;
+}
+.butn{
+    width: 200px;
+    margin-bottom: 10px;
+    background: #e89eab;
+    border-radius: 7px;
+    border: solid 3px #885df1;
+    color:#000;
+    text-decoration: none;
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+
+img{
+  width: 15%;
+  
+  }
+  
+  /*Flexbox*/
+
+  .flex-container #board{
+    display: flex;
+    flex-direction: row;
+   
+  }
+
+  /*Media Queries*/
+  
+  @media (max-width: 930px){
+  .flex-container{
+    display: flex;
+    flex-direction: column;
+     
+  }
+
+  #board{
+    flex-direction: column;
+    width: 100%;
+    
+  }
+  
+
+  #score_card{
+    flex-direction: column;
+    width: 100%;
+    position: unset;
+    
+  }
+
+  
+}
+  
