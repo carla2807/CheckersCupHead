@@ -13,4 +13,4 @@ capturar fichas,convertirse en rey hasta fin de la partida
 7. Juego completamente funcional para dos jugadores permitiendo ingresar nombres de los jugadores al inicial la partida.
 
 
-🎲 Disponible ahora en [Github Pages](/).
+🎲 Disponible ahora en [Github Pages](https://carla2807.github.io/CheckersCupHead/).
