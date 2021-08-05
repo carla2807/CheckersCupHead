@@ -195,7 +195,7 @@ function drawPieces(){
         if(pieceTracker[i].king) {
             boardContext.beginPath();
             boardContext.lineWidth = 2;
-            boardContext.strokeStyle = "#FFD119;";
+            boardContext.strokeStyle = "#FFD119";
             boardContext.arc((pieceTracker[i].col - 1) * squareSize + (squareSize* 0.5) + 0.5,(pieceTracker[i].row - 1) * squareSize + (squareSize * 0.5) + 0.5,(squareSize * 0.5) - 30,0,2 * Math.PI,false);
             boardContext.closePath();
             boardContext.stroke();
@@ -309,7 +309,7 @@ function dragPiece(e)
     if(pieceBeingMoved.king) {
         boardContext.beginPath();
         boardContext.lineWidth = 2;
-        boardContext.strokeStyle = "#FFD119;";
+        boardContext.strokeStyle = "#FFD119";
         boardContext.arc(canvasLocation[0],canvasLocation[1],(squareSize * 0.5) - 30,0,2 * Math.PI,false);
         boardContext.closePath();
         boardContext.stroke();
@@ -493,7 +493,7 @@ function checkForWin()
 {
     
     if((CupHeadScore == 12) || (MugmanScore == 12)) {
-        
+        //Operador ternario, funciona como condicional que evalua expresion como true or false
         var winner = (CupHeadScore == 12) ? "Player One" : "Player Two";
         
        
