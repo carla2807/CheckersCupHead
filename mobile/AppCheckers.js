@@ -1,6 +1,6 @@
-if((navigator.userAgent.indexOf("Android") == -1) && (navigator.userAgent.indexOf("iPhone OS") == -1)) {
-    location.href = "/checkers/";
-}
+//if((navigator.userAgent.indexOf("Android") == -1) && (navigator.userAgent.indexOf("iPhone OS") == -1)) {
+   // location.href = "/checkers/";
+//}
 
 //Variables globales
 var squareSize = 80
