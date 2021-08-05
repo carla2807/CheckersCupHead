@@ -1,6 +1,6 @@
-//if((navigator.userAgent.indexOf("Android") != -1) || (navigator.userAgent.indexOf("iPhone OS") != -1)) {
-    //location.href = "/mobile";
-//}
+if((navigator.userAgent.indexOf("Android") != -1) || (navigator.userAgent.indexOf("iPhone OS") != -1)) {
+    location.href = "/mobile";
+}
 
 //Variables globales
 var squareSize = 80;
@@ -507,9 +507,7 @@ function checkForWin()
         }
     }
 
-    if(CupHeadScore == 12 && MugmanScore == 12){
-        alert("Empate");
-    }
+   
 }
 
 //Funcion para guardar
