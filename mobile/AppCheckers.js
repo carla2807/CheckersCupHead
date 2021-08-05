@@ -1,9 +1,9 @@
-//if((navigator.userAgent.indexOf("Android") == -1) && (navigator.userAgent.indexOf("iPhone OS") == -1)) {
-   // location.href = "/checkers/";
-//}
+if((navigator.userAgent.indexOf("Android") == -1) && (navigator.userAgent.indexOf("iPhone OS") == -1)) {
+    location.href = "/checkers/";
+}
 
 //Variables globales
-var squareSize = 80;
+var squareSize = 80
 var boardWidth = squareSize * 8;
 var boardHeight = squareSize * 8;
 var red = "#e7eaf6";
@@ -227,17 +227,26 @@ function canvasLoc(e){
     return canvasLocation;
 }
 
-//
 function cursorLoc(e)
 {
     var canvasLocation = canvasLoc(e);
-                
-   
-    var cl1 = Math.ceil(canvasLocation[0] * (1 / squareSize));
-    var cl2 = Math.ceil(canvasLocation[1] * (1 / squareSize));
-    cursorLocation = [cl1,cl2];
-}
+                    
+    /* actualizo ancho real de las casillas para la posicion relativa del puntero */
+    squareSize1 = board.scrollWidth /8;
+    console.log('referencia ancho de la casilla: ' + squareSize1);
 
+    var cl1 = Math.ceil(canvasLocation[0] * (1 / squareSize1));
+    var cl2 = Math.ceil(canvasLocation[1] * (1 / squareSize1));
+    cursorLocation = [cl1,cl2];
+    
+    /* calculo posicion en tiempo real del cursor */
+    var cp1 = canvasLocation[0] * (1 / squareSize1);
+    var cp2 = canvasLocation[1] * (1 / squareSize1);
+    cursorPosition = [cp1,cp2];
+
+    console.log('valor de cursorLocation: ' + cursorLocation);
+    console.log('valor de cursorPosition: ' + cursorPosition);
+}
 
 //
 function clickPiece(e){
@@ -281,15 +290,16 @@ function dragPiece(e)
 
     cursorLoc(e);
     drawGame();
-    
-    
+
     //Arrastra la pieza y redibuja el juego
     var canvasLocation = canvasLoc(e);
     boardContext.beginPath();
     boardContext.fillStyle = whosTurnIs;
     boardContext.lineWidth = 5;
     boardContext.strokeStyle = red;
-    boardContext.arc(canvasLocation[0],canvasLocation[1],(squareSize * 0.5) - 10,0,2 * Math.PI,false);
+
+    boardContext.arc(((cursorPosition[0])*squareSize),((cursorPosition[1])*squareSize),(squareSize * 0.5) - 10,0,2 * Math.PI,false);
+    
     boardContext.closePath();
     boardContext.stroke();
     boardContext.fill();
@@ -507,9 +517,7 @@ function checkForWin()
         }
     }
 
-    if(CupHeadScore == 12 && MugmanScore == 12){
-        alert("Empate");
-    }
+   
 }
 
 //Funcion para guardar
